@@ -1,0 +1,90 @@
+{
+  "author": "Robert Smieja",
+  "description": "Template repository for a Typescript-based Node.js project",
+  "devDependencies": {
+    "@babel/core": "^7.7.2",
+    "@babel/preset-env": "^7.7.1",
+    "@babel/preset-typescript": "^7.7.2",
+    "@types/jest": "^24.0.23",
+    "@types/node": "^12.12.11",
+    "@types/webpack-env": "^1.14.1",
+    "@typescript-eslint/eslint-plugin": "^2.8.0",
+    "@typescript-eslint/parser": "^2.8.0",
+    "babel-jest": "^24.9.0",
+    "babel-loader": "^8.0.6",
+    "clean-webpack-plugin": "^3.0.0",
+    "cross-env": "^6.0.3",
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.7.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
+    "lint-staged": "^9.4.3",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.19.1",
+    "rimraf": "^3.0.0",
+    "serve": "^11.2.0",
+    "source-map-loader": "^0.2.4",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.2",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.10",
+    "webpack-merge": "^4.2.2"
+  },
+  "engines": {
+    "node": ">=10",
+    "npm": ">=6"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": [
+        "lint-staged"
+      ]
+    }
+  },
+  "keywords": [
+    "typescript",
+    "nodejs",
+    "template",
+    "babel",
+    "webpack"
+  ],
+  "license": "MIT",
+  "lint-staged": {
+    "src/*.{js,ts,jsx,tsx}": [
+      "eslint --fix",
+      "git add"
+    ],
+    "*.{js,ts,jsx,tsx,json,md}": [
+      "prettier --write",
+      "git add"
+    ]
+  },
+  "main": "lib/index.js",
+  "name": "typescript-template",
+  "private": true,
+  "scripts": {
+    "build": "npm run-script build:prod",
+    "build:prod": "cross-env NODE_ENV=production webpack --config webpack.config.prod.js",
+    "build:dev": "cross-env NODE_ENV=development webpack --config webpack.config.dev.js",
+    "clean": "rimraf dist/ lib/",
+    "lint": "eslint ./src/**/*",
+    "lint:staged": "lint-staged",
+    "lint:fix": "eslint --fix ./src/**/*",
+    "prettier": "prettier --write '*.{js,ts,jsx,tsx,json,md}'",
+    "start": "run-s build:dev start:dev",
+    "start:dev": "node dist/bundle.js",
+    "start:prod": "serve dist/",
+    "test": "jest",
+    "test:watch": "jest --watch"
+  },
+  "version": "0.1.0",
+  "dependencies": {
+    "@reduxjs/toolkit": "^1.0.4",
+    "@types/react": "^16.9.11",
+    "react": "^16.12.0",
+    "react-dom": "^16.12.0",
+    "react-redux": "^7.1.3",
+    "redux": "^4.0.4"
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "compilerOptions": {
+    "esModuleInterop": true,
+    "outDir": "lib",
+    "sourceMap": true,
+    "strict": true
+  }
+}

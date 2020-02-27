@@ -2,7 +2,7 @@
   "author": "Robert Smieja",
   "description": "Template repository for a Typescript-based Node.js project",
   "devDependencies": {
-    "@babel/core": "^7.8.4",
+    "@babel/core": "^7.8.6",
     "@babel/preset-env": "^7.8.4",
     "@babel/preset-typescript": "^7.8.3",
     "@types/jest": "^25.1.3",

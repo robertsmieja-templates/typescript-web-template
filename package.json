@@ -5,7 +5,7 @@
     "@babel/core": "^7.10.2",
     "@babel/preset-env": "^7.10.2",
     "@babel/preset-typescript": "^7.10.1",
-    "@types/jest": "^25.2.3",
+    "@types/jest": "^26.0.0",
     "@types/node": "^14.0.12",
     "@types/webpack-env": "^1.15.2",
     "@typescript-eslint/eslint-plugin": "^2.34.0",

@@ -3,7 +3,7 @@
   "description": "Template repository for a Typescript-based Node.js project",
   "devDependencies": {
     "@babel/core": "^7.13.8",
-    "@babel/preset-env": "^7.13.9",
+    "@babel/preset-env": "^7.14.2",
     "@babel/preset-typescript": "^7.13.0",
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.32",
